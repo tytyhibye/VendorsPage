@@ -4,7 +4,7 @@
 @using VendorsPage.Models;
 <h1>Add an order for @Model.Name</h1>
 
-<form action="/vendors/@Model.Id/order" method="post">
+<form action="/vendors/@Model.Id/orders" method="post">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
   <label for="orderDescription">Order Description</label>
   <input id="orderDescription" name="orderDescription" type="text" placeholder="ex: Planet Shaped Bread">

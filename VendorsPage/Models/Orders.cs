@@ -6,7 +6,7 @@ namespace VendorsPage.Models
   {
     public string Description { get; set; }
     public int Id {get; }
-    public string ImageURL { get; set; }
+    public int Price { get; set; }
     private static List<Orders> _instances = new List<Orders> {};
 
       public Orders (string description)
@@ -16,9 +16,9 @@ namespace VendorsPage.Models
         Id = _instances.Count;
       }
 
-      public Orders (string description, string imageURL)
+      public Orders (string description, int price)
       {
-        ImageURL = imageURL;
+        Price = price;
         Description = description;  // duplicate constructor to overload for argument edge cases
         _instances.Add(this);
         Id = _instances.Count;
