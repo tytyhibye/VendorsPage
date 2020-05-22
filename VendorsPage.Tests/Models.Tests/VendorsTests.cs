@@ -56,5 +56,19 @@ namespace VendorsPage.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+     [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string name01 = "Dill Rye the Sandwich Guy";
+      string name02 = "The Sand-Witch";
+      Vendors newVendor1 = new Vendors(name01);
+      Vendors newVendor2 = new Vendors(name02);
+
+      Vendors result = Vendors.Find(2);
+
+      Assert.AreEqual(newVendor2, result);
+    }
+
   }
 }
