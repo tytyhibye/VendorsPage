@@ -32,5 +32,21 @@ namespace VendorsPage.Tests
       Assert.AreEqual(description, result);
     }
 
+    [TestMethod]
+    public void SetDecription_SetDescription_string()
+    {
+      //Arrange
+      string description = "Planet Shaped Bread";
+      Orders newOrder = new Orders(description);
+
+      //Act
+      string updatedDescription = "Do the dishes";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
+    }
+
   }
 }
