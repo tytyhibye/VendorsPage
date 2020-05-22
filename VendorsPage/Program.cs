@@ -1,9 +1,9 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
-using MusicVendorsPage.Models;
+using VendorsPage.Models;
 
 
-namespace MusicOrganizer
+namespace VendorsPage
 {
   public class Program
   {
