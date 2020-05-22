@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+@using VendorsPage.Models;
+<h3>Here are all the orders for @Model["vendor"].Name:</h3>
+
+<ol>
+  @foreach (var order in @Model["orders"])  // We loop through all orders in the model. We passed the view a Dictionary containing key-value pairs, so we access orders with @Model["order] square bracket notation.
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li> // For each order, we display its description in an <li> 
+      
+      // We've also made each <li> a link to the path '/vendors/@Model["vendor"].Id/orders/@order.Id'. This will be the orders detail view. We already have an order detail page associated with the Show() route on the OrderController, but it's not at this super long path!
+
+      // When the user clicks a order from this list, they'll navigate to the Muisc's detail (show) page. Notice the path in this link is /categories/@Model["category"].Id/order/@order.Id, which follows RESTful standards depicted in the tables above.
+  }
+</ol>
+
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add Order</a></p>

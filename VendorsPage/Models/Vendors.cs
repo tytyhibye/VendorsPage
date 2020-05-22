@@ -5,6 +5,8 @@ namespace VendorsPage.Models
   public class Vendors
   {
     private static List<Vendors> _instances = new List<Vendors> {};
+    
+    public string Description { get; set; }
     public string Name { get; set; }
     public int Id { get; }
     public List<Orders> Orders { get; set; } // Auto-implemented property with Orders delcaring the data type as a list
@@ -13,6 +15,15 @@ namespace VendorsPage.Models
     {
       Name = vendorsName;
       _instances.Add(this);  // All other properties are assigned automatically in the body of the constructor.
+      Id = _instances.Count;
+      Orders = new List<Orders>{};
+    }
+
+    public Vendors(string vendorsName, string vendorDescription)
+    {
+      Description = vendorDescription; // overloaded constructor for optional description field.
+      Name = vendorsName;
+      _instances.Add(this);
       Id = _instances.Count;
       Orders = new List<Orders>{};
     }

@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>New Vendors Form</h1>
+<p>Add a vendor here:</p>
+
+<form action="/vendors" method="post">
+  <label for="vendorName">Vendor Name:</label>
+  <input id="vendorName" name="vendorName" placeholder="ex: Dill Rye the Sandwich Guy" required>
+  <label for="vendorDescription">Vendor Description (optional)</label>
+  <input id="vendorDescription" name="vendorDescription" placeholder="ex: Best Customer!">
+  <br>
+  <br>
+  <button class="btn" type="submit">Add</button>
+</form>
