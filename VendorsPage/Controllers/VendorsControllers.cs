@@ -22,9 +22,9 @@ namespace VendorsPage.Controllers
     }
 
     [HttpPost("/vendors")] // Creates vendors
-    public ActionResult Create(string vendorName)
+    public ActionResult Create(string vendorName, string vendorDescription)
     {
-      Vendors newVendor = new Vendors(vendorName);
+      Vendors newVendor = new Vendors(vendorName, vendorDescription);
       return RedirectToAction("Index");
     }
 
@@ -40,11 +40,11 @@ namespace VendorsPage.Controllers
     }
     // This one creates new Orders within a given Vendors, not new vendors:
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(int vendorId, string orderDescription, int price) // The method now takes two arguments: the VendorsId we passed into a hidden form field and an OrdersDescription that contains the user's form input.
+    public ActionResult Create(int vendorId, string orderDescription, double orderPrice) // The method now takes two arguments: the VendorsId we passed into a hidden form field and an OrdersDescription that contains the user's form input.
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendors foundVendors = Vendors.Find(vendorId); // Using the VendorsId provided as an argument, we locate the Vendors object our new Orders should belong to and call it foundVendors.
-      Orders newOrder = new Orders(orderDescription, price); // We then create a new Orders object with the user's form input.
+      Orders newOrder = new Orders(orderDescription, orderPrice); // We then create a new Orders object with the user's form input.
       foundVendors.AddOrder(newOrder); // We add the newOrders to the foundVendors with our existing AddOrders() method.
       List<Orders> vendorsOrders = foundVendors.Orders; // We retrieve all other Orders that corresponds to this Vendors and add it to our model. We do this because the view we'll render at the end of this route requires this information.
       model.Add("orders", vendorsOrders);
