@@ -9,19 +9,18 @@ namespace VendorsPage.Models
     public string Description { get; set; }
     public string Name { get; set; }
     public int Id { get; }
-    public List<Orders> Orders { get; set; } // Auto-implemented property with Orders delcaring the data type as a list
+    public List<Orders> Orders { get; set; }
   
-    public Vendors(string vendorName) // The constructor only accepts an argument for vendorsName, which is assigned to the Name property.
-    {
+    public Vendors(string vendorName)    {
       Name = vendorName;
-      _instances.Add(this);  // All other properties are assigned automatically in the body of the constructor.
+      _instances.Add(this);
       Id = _instances.Count;
       Orders = new List<Orders>{};
     }
 
     public Vendors(string vendorName, string vendorDescription)
     {
-      Description = vendorDescription; // overloaded constructor for optional description field.
+      Description = vendorDescription;
       Name = vendorName;
       _instances.Add(this);
       Id = _instances.Count;

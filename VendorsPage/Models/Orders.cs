@@ -19,7 +19,7 @@ namespace VendorsPage.Models
       public Orders (string description, double price)
       {
         Price = price;
-        Description = description;  // duplicate constructor to overload for argument edge cases
+        Description = description;
         _instances.Add(this);
         Id = _instances.Count;
       }
