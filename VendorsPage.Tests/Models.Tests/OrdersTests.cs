@@ -63,5 +63,26 @@ namespace VendorsPage.Tests
       // Assert
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrdersList()
+    {
+      //Arrange
+      string description01 = "Planet Shaped Bread";
+      string description02 = "Sun Shaped Bread";
+      Orders newOrder1 = new Orders(description01);
+      Orders newOrder2 = new Orders(description02);
+      List<Orders> newList = new List<Orders> {newOrder1, newOrder2};
+
+      //Act
+      List<Orders> result = Orders.GetAll();
+      foreach (Orders thisOrder in result)
+      {
+        Console.WriteLine("Output from second GetAll test: " + thisOrder.Description);
+      }
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
