@@ -14,7 +14,7 @@ namespace VendorsPage.Tests
     }
 
     [TestMethod]
-    public void OrdersConstructor_CreatesInstanceOfOrders_Orders()
+    public void OrdersConstructor_CreatesInstanceOfOrder_Orders()
     {
       Orders newOrder = new Orders("test");
       Assert.AreEqual(typeof(Orders), newOrder.GetType());
