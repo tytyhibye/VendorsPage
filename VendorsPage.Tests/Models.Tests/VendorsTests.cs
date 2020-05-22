@@ -16,28 +16,28 @@ namespace VendorsPage.Tests
     [TestMethod]
     public void VendorsConstructor_CreatesInstanceOfVendors_Vendors()
     {
-      Vendors newVendors = new Vendors("test vendor");
-      Assert.AreEqual(typeof(Vendors), newVendors.GetType());
+      Vendors newVendor = new Vendors("test vendor");
+      Assert.AreEqual(typeof(Vendors), newVendor.GetType());
     }
 
    [TestMethod]
     public void GetName_ReturnsName_String()
     {
       string name = "Test Vendor";
-      Vendors newVendors = new Vendors(name);
+      Vendors newVendor = new Vendors(name);
 
-      string result = newVendors.Name;
+      string result = newVendor.Name;
 
       Assert.AreEqual(name, result);
     }
 
     [TestMethod]
-    public void GetId_ReturnsVendorsId_Int()
+    public void GetId_ReturnsVendorId_Int()
     {
       string name = "Test Vendor";
-      Vendors newVendors = new Vendors(name);
+      Vendors newVendor = new Vendors(name);
 
-      int result = newVendors.Id;
+      int result = newVendor.Id;
 
       Assert.AreEqual(1, result);
     }
