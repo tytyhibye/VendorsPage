@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+@using VendorsPage.Models;
+<h1>Order Details:</h1>
+
+<h2>@Model["order"].Description</h2>
+<h3>Vendor: @Model["vendor"].Name</h3>
+<img src='@Model["order"].ImageURL'> 
+<br>
+@* Because our model data resides in a Dictionary named model, we use square bracket notation to access the two objects. We also add a line detailing which Category this Item belongs to. *@
+
+<a href='/vendors/@Model["vendor"].Id/orders/new'>Add Another Order</a>

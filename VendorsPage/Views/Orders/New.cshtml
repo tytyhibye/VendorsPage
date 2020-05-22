@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+@using VendorsPage.Models;
+<h1>Add an order for @Model.Name</h1>
+
+<form action="/vendors/@Model.Id/order" method="post">
+  <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
+  <label for="orderDescription">Order Description</label>
+  <input id="orderDescription" name="orderDescription" type="text" placeholder="ex: Planet Shaped Bread">
+  <br>
+  <label for="price">Enter total price of order:</label>
+  <input name="price" id="price" type="text" placeholder="ex: 39.99">
+  <br>
+  <br>
+  <button class="btn" type='submit'>Add Order</button>
+</form>
