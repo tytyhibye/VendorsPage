@@ -69,6 +69,19 @@ namespace VendorsPage.Tests
 
       Assert.AreEqual(newVendor2, result);
     }
+     [TestMethod]
+  public void AddOrder_AssociatesOrderWithVendor_OrderList()
+  {
+    string description = "Planet Shaped Bread";
+    Order newOrder = new Order(description);
+    List<Order> newList = new List<Order> { newOrder }; // We create a new Order and add it to a List.
+    string name = "Dill Rye the Sandwich Guy";
+    Vendors newVendor = new Vendors(name); // Then we create a new Vendors and call the soon-to-be-created AddOrder method upon it, passing in our sample Order.
+    newVendor.AddOrder(newOrder); // Next, we call newVendor.Orders, to retrieve the Orders saved in our Vendors.
 
+    List<Order> result = newVendor.Orders; // Finally, we assert that newVendor.Orders should return a List containing our single Order.
+
+    CollectionAssert.AreEqual(newList, result);
+  }
   }
 }
