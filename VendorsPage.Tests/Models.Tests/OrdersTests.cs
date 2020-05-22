@@ -98,5 +98,21 @@ namespace VendorsPage.Tests
       //Assert
       Assert.AreEqual(1, result);
     }
+
+     [TestMethod]
+  public void Find_ReturnsCorrectOrders_Orders()
+  {
+    //Arrange
+    string description01 = "Planet Shaped Bread";
+    string description02 = "Sun Shaped Bread";
+    Orders newOrder1 = new Orders(description01);
+    Orders newOrder2 = new Orders(description02);
+
+    //Act
+    Orders result = Orders.Find(2);
+
+    //Assert
+    Assert.AreEqual(newOrder2, result);
+  }
   }
 }
