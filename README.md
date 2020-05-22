@@ -1,4 +1,4 @@
-[![wc-title.jpg](https://iili.io/JWVj3b.png)](https://iili.io/JWVj3b.png)
+[![wc-title.jpg](https://iili.io/JWeGEB.png)](https://iili.io/JWeGEB.png)
 
 ### _Created by Tyler Bates_
 
