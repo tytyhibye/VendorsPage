@@ -20,5 +20,17 @@ namespace VendorsPage.Tests
       Assert.AreEqual(typeof(Orders), newOrder.GetType());
     }
 
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      //Arrange
+      string description = "Panet Shaped Bread";
+      Orders newOrder = new Orders(description);
+      //Act
+      string result = newOrder.Description;
+      //Assert
+      Assert.AreEqual(description, result);
+    }
+
   }
 }
