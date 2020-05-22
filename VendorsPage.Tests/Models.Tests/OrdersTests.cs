@@ -40,7 +40,7 @@ namespace VendorsPage.Tests
       Orders newOrder = new Orders(description);
 
       //Act
-      string updatedDescription = "Do the dishes";
+      string updatedDescription = "Sun Shaped Bread";
       newOrder.Description = updatedDescription;
       string result = newOrder.Description;
 
@@ -48,5 +48,20 @@ namespace VendorsPage.Tests
       Assert.AreEqual(updatedDescription, result);
     }
 
+     [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrdersList()
+    {
+      // Arrange
+      List<Orders> newList = new List<Orders> { };
+
+      // Act
+      List<Orders> result = Orders.GetAll();
+      foreach (Orders thisOrder in result)
+      {
+        Console.WriteLine("Output from empty list GetAll test: " + thisOrder.Description);
+      }
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
