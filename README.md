@@ -4,7 +4,7 @@
 
 ## _Description_
 
-Music Organizer is an interactive program that will take user inputted music from different genres and dynamically organize them by category. The user will then have access to these lists and each one will have click functions to give further details of the list item.
+Pierre's Vendor list is an interactive application that allows the user to upload a static list of vendors each having their own individual sub-lists of orders and details. Each order has additional details and the application dynamically stores and organizes all data while offering easy navigation throughout.
 
 
 ## _Setup/Installation Requirements_ 
