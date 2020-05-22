@@ -5,7 +5,7 @@ namespace VendorsPage.Models
   public class Orders
   {
     public string Description { get; set; }
-    public int Id {get; }
+    public int Id { get; }
     public double Price { get; set; }
     private static List<Orders> _instances = new List<Orders> {};
 

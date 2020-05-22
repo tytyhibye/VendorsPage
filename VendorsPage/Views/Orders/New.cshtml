@@ -2,15 +2,15 @@
   Layout = "_Layout";
 }
 @using VendorsPage.Models;
-<h1>Add an order for @Model.Name</h1>
+<h3>Add an order for @Model.Name</h3>
 
 <form action="/vendors/@Model.Id/orders" method="post">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
   <label for="orderDescription">Order Description</label>
-  <input id="orderDescription" name="orderDescription" type="text" placeholder="ex: Planet Shaped Bread">
+  <input id="orderDescription" name="orderDescription" type="text" placeholder="ex: Planet Shaped Bread" requuired>
   <br>
   <label for="orderPrice">Enter total price of order:</label>
-  <input name="orderPrice" id="orderPrice" type="text" placeholder="ex: 39.99">
+  <input name="orderPrice" id="orderPrice" type="text" placeholder="ex: 39.99" required>
   <br>
   <br>
   <button class="btn" type='submit'>Add Order</button>

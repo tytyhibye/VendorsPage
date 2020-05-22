@@ -11,7 +11,7 @@
 
   @foreach (Vendors vendor in Model)
   {
-    <h3><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3><p>(@vendor.Description)</p>
+    <h2><a href='/vendors/@vendor.Id'>@vendor.Name</a></h2><p>(@vendor.Description)</p>
   }
   <br>
   <form action="/vendors/delete" method="post">
