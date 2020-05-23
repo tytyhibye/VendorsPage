@@ -4,7 +4,7 @@
 
 ## _Description_
 
-Pierre's Vendor list is an interactive application that allows the user to upload a static list of vendors each having their own individual sub-lists of orders and details. Each order has additional details and the application dynamically stores and organizes all data while offering easy navigation throughout.
+Pierre's Vendor Page is an interactive application that allows the user to upload a static list of vendors each having their own individual sub-lists of orders and details. Each order has additional details and the application dynamically stores and organizes all data while offering easy navigation throughout.
 
 
 ## _Setup/Installation Requirements_ 
