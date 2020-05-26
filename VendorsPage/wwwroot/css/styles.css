@@ -2,7 +2,7 @@
 
 #navBar {
   position:center;
-  width: 100%;
+  width: auto;
   height: auto;
   color: rgb(0, 0, 0);
   font-weight: 700;
@@ -13,9 +13,11 @@
   font-size: auto;
   font-family: "Open Sans",  Impact;
   cursor: pointer;
-  border: double 2px black;
+  border: none;
+  /* border: double 2px black; */
   box-shadow: 0px 0px 10px #fff ;
   padding:8px;
+  text-align: center;
 }
 
 .btn {
@@ -80,7 +82,7 @@ h1 {
   font-weight: 700;
   text-shadow: 0px 0px 12px rgb(255, 255, 255), 0px 0px 12px rgb(253, 255, 131);
   font-family: "Open Sans",  Impact;
-  font-size: 100px;
+  font-size: auto;
 }
 
 h2 {
@@ -89,11 +91,11 @@ h2 {
 
 h3 {
   color: rgb(0, 0, 0);
-  letter-spacing: -4px;
+  letter-spacing: -2px;
   font-weight: 700;
   text-shadow: 0px 0px 12px rgb(255, 255, 255), 0px 0px 12px rgb(253, 255, 131);
   font-family: "Open Sans",  Impact;
-  font-size: 50px;
+  font-size: auto;
 }
 
 input[type=text] {
